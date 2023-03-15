@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import ToDoList, Item
-from .forms import CreateNewList
+from .forms import PointForm
 
 
 # Create your views here.

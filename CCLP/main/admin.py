@@ -1,7 +1,13 @@
 from django.contrib import admin
-from .models import ToDoList, Item
+from .models import Student, Class, Person
 
 
 # Register your models here.
-admin.site.register(ToDoList)
-admin.site.register(Item)
+admin.site.register(Student)
+admin.site.register(Class)
+
+
+class PersonAdmin(admin.ModelAdmin):
+	list_display = ('student', 'section', 'teacher', 'points', 'description')
+
+admin.site.register(Person, PersonAdmin)
